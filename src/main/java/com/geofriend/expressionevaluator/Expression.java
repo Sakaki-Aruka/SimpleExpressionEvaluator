@@ -213,9 +213,7 @@ public class Expression {
 
             case "%":
                 if (areBothOperandNumeric) {
-                    double left = Double.parseDouble(leftValue);
-                    double right = Double.parseDouble(rightValue);
-                    return String.valueOf(left - (long)(left / right) * right);
+                    return String.valueOf(Double.parseDouble(leftValue) % Double.parseDouble(rightValue));
                 } else return "0";
 
             case "^":
